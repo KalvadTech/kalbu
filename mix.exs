@@ -33,22 +33,24 @@ defmodule Kalbu.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.6.0-rc.0", override: true},
-      {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
-      {:phoenix_html, "~> 3.0"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.16.0"},
-      {:floki, ">= 0.30.0", only: :test},
-      {:phoenix_live_dashboard, "~> 0.5"},
-      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
-      {:swoosh, "~> 1.3"},
-      {:telemetry_metrics, "~> 0.6"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.18"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:ecto_sql, "3.7.0"},
+      {:esbuild, "0.3.1", runtime: Mix.env() == :dev},
+      {:floki, "0.31.0", only: :test},
+      {:gettext, "0.18.2"},
+      {:jason, "1.2.2"},
+      {:kaffy, github: "KalvadTech/Kaffy", branch: "1.6.0-rc.0"},
+      {:phoenix, "1.6.0-rc.0", override: true},
+      {:phoenix_ecto, "4.4.0"},
+      {:phoenix_html, "3.0.3"},
+      {:phoenix_live_dashboard, "0.5.1"},
+      {:phoenix_live_reload, "1.3.3", only: :dev},
+      {:phoenix_live_view, "0.16.3"},
+      {:plug_cowboy, "2.5.2"},
+      {:postgrex, "0.15.10"},
+      {:swoosh, "1.5.0"},
+      {:telemetry_metrics, "0.6.1"},
+      {:telemetry_poller, "1.0.0"}
     ]
   end
 

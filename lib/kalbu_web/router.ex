@@ -52,4 +52,8 @@ defmodule KalbuWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  if Mix.env() in [:dev, :test] do
+    use Kaffy.Routes, scope: "/admin"
+  end
 end
